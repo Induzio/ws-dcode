@@ -87,7 +87,7 @@ then set (Pre)-Master-Secret log filename:
 
 <!-- <img width="854" height="629" alt="Image" src="https://github.com/Induzio/ws-dcode/blob/main/sslkeysadd.png?raw=true" /> -->
 
-<img src="./sslkeysadd.png" alt="Screenshot" width="400"/>
+<img src="./sslkeysadd.png" alt="Screenshot" width=""/>
 
 
 
