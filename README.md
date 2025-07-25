@@ -83,7 +83,7 @@ Go to:
 
 then set (Pre)-Master-Secret log filename:
 
-<img src="./sslkeysadd.png" alt="Screenshot" width="600"/>
+<img src="./sslkeysadd.png" alt="Screenshot" width="700"/>
 
 
 
