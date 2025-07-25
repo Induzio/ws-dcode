@@ -75,7 +75,7 @@ Then visit:
     
 once verify if the sslkeys.log is present after visiting....
 
-### step3: Add proto_dissector.lua in wireshark
+### step3: Add sslkeys.log in wireshark
 
 Go to:
 
@@ -83,8 +83,21 @@ Go to:
 
 then set (Pre)-Master-Secret log filename:
 
-<img src="./sslkeysadd.png" alt="Screenshot" width="700"/>
+<img src="./img/sslkeysadd.png" alt="Screenshot" width="700"/>
 
 
+### step4: Add proto_dissector.lua in wireshark
 
+    sudo cp ~/protolib/ws-dcode/proto_dissector.lua /usr/lib/x86_64-linux-gnu/wireshark/plugins
 
+Now, reload the lua plugin:
+
+<img src="./img/luapluginreload.png" alt="Screenshot" width="700"/>
+
+Now your wireshark is setup to decode the packets to protobuf....
+
+### step5: Refresh the firefox to see the decoded protobuf packets
+
+When you refresh again then you'll see the decoded packets in the wireshark as protobuf like below:
+
+<img src="./img/finalresult.png" alt="Screenshot" width="700"/>
