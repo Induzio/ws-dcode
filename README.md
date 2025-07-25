@@ -83,7 +83,7 @@ Go to:
 
 then set (Pre)-Master-Secret log filename:
 
-![image alt] (https://github.com/Induzio/ws-dcode/blob/main/sslkeysadd.png?raw=true)
+![Image Alt] (https://github.com/Induzio/ws-dcode/blob/main/sslkeysadd.png?raw=true)
 
 
 
