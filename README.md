@@ -36,23 +36,23 @@ If the above step3 didn't worked then do step3.1 and step3.2
     sudo apt install -y build-essential lua5.2 liblua5.2-dev make gcc
     mkdir ~/protolib
     cd ~/protolib
-    wget https://github.com/mpx/lua-cjson/archive/refs/tags/2.1.0.10.tar.gz
-    tar -xvzf 2.1.0.10.tar.gz
-    cd lua-cjson-2.1.0.10
+    wget https://github.com/mpx/lua-cjson/archive/refs/tags/2.1.0.tar.gz
+    tar -xvzf 2.1.0.tar.gz
+    cd lua-cjson-2.1.0
     make LUA_INCLUDE_DIR=/usr/include/lua5.2 LUA_VERSION=5.2
     sudo cp cjson.so /usr/local/lib/lua/5.2/cjson.so
 
 #### step3.2: Install pb ( lua-protobuf )
 
-    cd ..
+    cd ~/protolib
     git clone https://github.com/starwing/lua-protobuf.git
     cd lua-protobuf
-    make LUA_VERSION=5.2 LUA_INCLUDE_DIR=/usr/include/lua5.2
-    sudo cp ./build/pb.so /usr/local/lib/lua/5.2/pb.so
-    cd ..
+    cmake -DLUA_INCLUDE_DIR=/usr/include/lua5.2 -DCMAKE_C_FLAGS="-I/usr/include/lua5.2"
+    sudo cp ./pb.so /usr/local/lib/lua/5.2/pb.so
 
 #### step4: Get Lua websocket decoder plugin
 
+    cd ~/protolib
     git clone https://github.com/Induzio/ws-dcode.git
 
 # Wireshark setup
