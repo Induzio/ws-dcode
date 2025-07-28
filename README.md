@@ -40,7 +40,7 @@ If the above step3 didn't worked then do step3.1 and step3.2
     tar -xvzf 2.1.0.tar.gz
     cd lua-cjson-2.1.0
     make LUA_INCLUDE_DIR=/usr/include/lua5.2 LUA_VERSION=5.2
-    sudo cp cjson.so /usr/local/lib/lua/5.2/cjson.so
+    sudo cp cjson.so /usr/lib/x86_64-linux-gnu/lua/5.2/
 
 #### step3.2: Install pb ( lua-protobuf )
 
@@ -48,7 +48,8 @@ If the above step3 didn't worked then do step3.1 and step3.2
     git clone https://github.com/starwing/lua-protobuf.git
     cd lua-protobuf
     cmake -DLUA_INCLUDE_DIR=/usr/include/lua5.2 -DCMAKE_C_FLAGS="-I/usr/include/lua5.2"
-    sudo cp ./pb.so /usr/local/lib/lua/5.2/pb.so
+    make
+    sudo cp ./pb.so /usr/lib/x86_64-linux-gnu/lua/5.2/
 
 #### step4: Get Lua websocket decoder plugin
 
