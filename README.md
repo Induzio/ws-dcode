@@ -63,11 +63,13 @@ Run wireshark with below cmd:
 
 Now, select wlo1 and in filter 
 
-<img src="./img/wireshark_opened.png" alt="Screenshot" width="700"/>
+<img src="./img/wireshark_opened1.png" alt="Screenshot" width="700"/>
 
 ### step2: open another terminal
 
 The below commands will capture the ssl keys for decryption
+
+##### warning: Before running the below cmds please close all the firefox windows opened
 
     export SSLKEYLOGFILE=$HOME/protolib/sslkeys.log
     firefox &
@@ -78,7 +80,6 @@ Then visit:
 once verify if the sslkeys.log is present after visiting by running below cmd in any terminal....
     
     ls $HOME/protolib/sslkeys.log
-
 
 
 ### step3: Add sslkeys.log in wireshark
