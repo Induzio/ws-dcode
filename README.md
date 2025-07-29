@@ -58,11 +58,15 @@ If the above step3 didn't worked then do step3.1 and step3.2
 
 # Wireshark setup
 
-### step1: open a terminal
+### step1: open a New terminal
 
-The below command will open wireshark GUI
+Run wireshark with below cmd:
 
     sudo wireshark
+
+Now, select wlo1 and in filter 
+
+<img src="./img/wireshark_opened.png" alt="Screenshot" width="700"/>
 
 ### step2: open another terminal
 
@@ -75,30 +79,47 @@ Then visit:
          https://ysafe.io
     
 once verify if the sslkeys.log is present after visiting....
+    
+    ls $HOME/protolib/sslkeys.log
+
+
 
 ### step3: Add sslkeys.log in wireshark
 
-Go to:
+Now you have to add the `sslkeys.log` in  `Edit > Preferences > Protocols > TLS`
 
-    Edit > Preferences > Protocols > TLS  
+Follow below steps to add:
+
+#### step3.1: Go to Preferences
+
+<img src="./img/navigation_to_preferencs.png" alt="Screenshot" width="700"/>
+    
+
+#### step3.2: Go to protocols
+
+<img src="./img/Goto protocols.png" alt="Screenshot" width="700"/>
 
 then set (Pre)-Master-Secret log filename:
 
-<img src="./img/sslkeysadd.png" alt="Screenshot" width="700"/>
+<img src="./img/sslkeysadd1.png" alt="Screenshot" width="700"/>
 
 
-### step4: Add proto_dissector.lua in wireshark
+### step4: Add Protobuf decoding plugin in wireshark
+
+Now run below cmd in any terminal to add the plugin....
 
     sudo cp ~/protolib/ws-dcode/proto_dissector.lua /usr/lib/x86_64-linux-gnu/wireshark/plugins
 
-Now, reload the lua plugin:
+Now, reload the lua plugin in wireshark:
 
 <img src="./img/luapluginreload.png" alt="Screenshot" width="700"/>
 
-Now your wireshark is setup to decode the packets to protobuf....
+#### 🥹 Now your wireshark is setup completely....
 
 ### step5: Refresh the firefox to see the decoded protobuf packets
 
 When you refresh again then you'll see the decoded packets in the wireshark as protobuf like below:
 
-<img src="./img/finalresult.png" alt="Screenshot" width="700"/>
+<img src="./img/finalresult1.png" alt="Screenshot" width="700"/>
+
+#### Hurray 🌟!!!  Now your wireshark is setup to decode the packets to protobuf....

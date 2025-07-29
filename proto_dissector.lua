@@ -2,7 +2,7 @@ local pb = require("pb")
 local json = require("cjson")
 
 -- Load the descriptor set
-local f = assert(io.open("/home/manoj/protofiles/wiresharkprotos/proto_bundle.desc", "rb"))
+local f = assert(io.open("~/protolib/ws-dcode/proto_bundle.desc", "rb"))
 local data = f:read("*a")
 f:close()
 assert(pb.load(data))
