@@ -25,11 +25,8 @@ Install all the required prerequisites
 - `sudo apt install -y firefox`
 
 ### step3: Install Lua and LuaRocks (Lua package manager)
-    sudo apt install -y lua5.2 luarocks
-    sudo luarocks install lua-cjson
-    sudo luarocks install lua-protobuf
 
-If the above step3 didn't worked then do step3.1 and step3.2
+Install the dependency modules manually
 
 #### step3.1: Install cjson
 
@@ -78,7 +75,7 @@ The below commands will capture the ssl keys for decryption
 Then visit:
          https://ysafe.io
     
-once verify if the sslkeys.log is present after visiting....
+once verify if the sslkeys.log is present after visiting by running below cmd in any terminal....
     
     ls $HOME/protolib/sslkeys.log
 
@@ -109,6 +106,7 @@ then set (Pre)-Master-Secret log filename:
 Now run below cmd in any terminal to add the plugin....
 
     sudo cp ~/protolib/ws-dcode/proto_dissector.lua /usr/lib/x86_64-linux-gnu/wireshark/plugins
+    sudo cp ~/protolib/ws-dcode/proto_bundle.desc /usr/lib/x86_64-linux-gnu/wireshark/plugins
 
 Now, reload the lua plugin in wireshark:
 
