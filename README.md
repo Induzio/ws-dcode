@@ -5,6 +5,7 @@ Decode websocket with protobuf in wireshark
 
 The below are the required in your system:
 - `Firefox or Chrome`
+- `Git`
 - `Wireshark`
 - `LuaRocks` (Lua package manager)
 - `lua-cjson & lua-protobuf` (Lua modules)
