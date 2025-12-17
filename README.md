@@ -67,6 +67,8 @@ Now, select wlo1 and in filter
 
 <img src="./img/wireshark_opened1.png" alt="Screenshot" width="700"/>
 
+After selecting step1 and step2 then press Enter... (You'll get an interface capturing on your interface and port 5577)
+
 ### step2: open another terminal
 
 The below commands will capture the ssl keys for decryption
