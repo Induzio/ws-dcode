@@ -38,6 +38,7 @@ Install the dependency modules manually
     tar -xvzf 2.1.0.tar.gz
     cd lua-cjson-2.1.0
     make LUA_INCLUDE_DIR=/usr/include/lua5.2 LUA_VERSION=5.2
+    sudo mkdir -p /usr/lib/x86_64-linux-gnu/lua/5.2
     sudo cp cjson.so /usr/lib/x86_64-linux-gnu/lua/5.2/
 
 #### step3.2: Install pb ( lua-protobuf )
